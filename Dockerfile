@@ -15,17 +15,6 @@ RUN curl https://ak-delivery04-mul.dhe.ibm.com/sar/CMA/WSA/05ssz/1/wlp-featureRe
 
 #
 
-#RUN curl -k -s -f -H "X-JFrog-Art-Api:AKCp2UNCmfU13rTHJZ7WiwLrjvZefrscscCgZ9fvCXxTKoR2SzGBnxuaYJbRT38Sn82ft94MV" -X GET "$ARTIFACTORY_URL/$ARTIFACTORY_APP/$VERSION_PKG/server.xml" -o $HOME_DIR/server.xml \
-#
-#    && curl -k -s -f -H "X-JFrog-Art-Api:AKCp2UNCmfU13rTHJZ7WiwLrjvZefrscscCgZ9fvCXxTKoR2SzGBnxuaYJbRT38Sn82ft94MV" -X GET "$ARTIFACTORY_URL/$ARTIFACTORY_APP/$VERSION_PKG/JPetStore.war" -o $APP_DIR/JPetStore.war \
-#
-#    && mkdir -p $LIBERTY_DIR/etc \
-#
-#    && curl -k -s -f -H "X-JFrog-Art-Api:AKCp2UNCmfU13rTHJZ7WiwLrjvZefrscscCgZ9fvCXxTKoR2SzGBnxuaYJbRT38Sn82ft94MV" -X GET "$ARTIFACTORY_URL/$LIBERTY_REPO/repositories.properties" -o $LIBERTY_DIR/etc/repositories.properties \
-#
-#    && curl -k -s -f -H "X-JFrog-Art-Api:AKCp2UNCmfU13rTHJZ7WiwLrjvZefrscscCgZ9fvCXxTKoR2SzGBnxuaYJbRT38Sn82ft94MV" -X GET "$ARTIFACTORY_URL/$LIBERTY_REPO/wlp-featureRepo-8.5.5.9.zip" -o $LIBERTY_DIR/usr/wlp-featureRepo-8.5.5.9.zip
- 
-
 RUN /opt/IBM/WebSphere/Liberty/bin/installUtility install --acceptLicense defaultServer \
 
    && rm -rf /output/workarea /output/logs \
