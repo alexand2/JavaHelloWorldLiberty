@@ -1,7 +1,7 @@
 #Functional for JPetStore
 
-FROM localhost:5000/websphere-liberty:8.5.5.9
-#FROM websherebuilds:latest
+#FROM localhost:5000/websphere-liberty:8.5.5.9
+FROM websherebuilds:latest
 
 ENV LIBERTY_DIR="/opt/IBM/WebSphere/Liberty" ARTIFACTORY_URL="https://artifactory-qa.bmogc.net/artifactory" ARTIFACTORY_APP="DevOps_Videos" LIBERTY_REPO="EPS_ARA/WebSphere/Liberty" VERSION_PKG="OpenShift/DockerDemo" HOME_DIR="/opt/IBM/WebSphere/Liberty/usr/servers/defaultServer/" LOG_DIR="/opt/IBM/WebSphere/Liberty/usr/servers/defaultServer/logs/" APP_DIR="/opt/IBM/WebSphere/Liberty/usr/servers/defaultServer/apps/"
 
