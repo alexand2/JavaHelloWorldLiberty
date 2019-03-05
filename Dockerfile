@@ -6,8 +6,8 @@ RUN mkdir -p $LIBERTY_DIR/etc
 
 COPY server.xml $HOME_DIR/server.xml
 COPY JavaHelloWorldApp.war $APP_DIR/JavaHelloWorldApp.war
-COPY repositories.properties $LIBERTY_DIR/etc/repositories.properties
-RUN curl https://ak-delivery04-mul.dhe.ibm.com/sar/CMA/WSA/07zlf/0/wlp-featureRepo-18.0.0.4.zip -o $LIBERTY_DIR/usr/wlp-featureRepo-18.0.0.4.zip
+#COPY repositories.properties $LIBERTY_DIR/etc/repositories.properties
+#RUN curl https://ak-delivery04-mul.dhe.ibm.com/sar/CMA/WSA/07zlf/0/wlp-featureRepo-18.0.0.4.zip -o $LIBERTY_DIR/usr/wlp-featureRepo-18.0.0.4.zip
 
 #
 
@@ -17,7 +17,7 @@ RUN /opt/IBM/WebSphere/Liberty/bin/installUtility install --acceptLicense defaul
 
    && rm -rf /output/workarea /output/logs \
 
-   && rm -rf $LIBERTY_DIR/usr/wlp-featureRepo-18.0.0.4.zip \
+   #&& rm -rf $LIBERTY_DIR/usr/wlp-featureRepo-18.0.0.4.zip \
 
    && chmod -R 775 $LIBERTY_DIR
 
